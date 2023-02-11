@@ -15,7 +15,7 @@ const DayItem = styled.div`
    min-height: 50px;
    background-color: #f1f2ec;
    border-radius: 10px;
-   margin: 5px;
+   margin: 5px 0;
    cursor: pointer;
    font-size: 14px;
    padding: 5px 15px;

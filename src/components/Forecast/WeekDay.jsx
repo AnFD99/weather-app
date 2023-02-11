@@ -6,10 +6,10 @@ import {
    AccordionItemPanel,
 } from 'react-accessible-accordion'
 import styled from 'styled-components'
+import { device } from '../../utils/device'
 
 const DayItem = styled.div`
    display: flex;
-   /* flex-direction: row; */
    align-items: center;
    min-width: 330px;
    min-height: 50px;
@@ -57,9 +57,14 @@ const WeatherIcon = styled.img.attrs(({ icon }) => ({
 
 const DailyDetails = styled.div`
    display: grid;
-   grid-gap: 0 15px;
+   gap: 0 15px;
    grid-template-columns: 1fr 1fr;
    padding: 5px 15px;
+
+   @media ${device.mobile} {
+      grid-template-columns: 1fr;
+      gap: 0;
+   }
 `
 
 const DailyDetailsItem = styled.div`
@@ -117,4 +122,7 @@ const WeekDay = ({ dayName, item }) => {
 }
 
 export default WeekDay
+
+
+
 

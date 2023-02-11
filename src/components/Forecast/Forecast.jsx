@@ -3,22 +3,28 @@ import { Accordion } from 'react-accessible-accordion'
 import styled from 'styled-components'
 import WeekDay from './WeekDay'
 import { filterList } from '../../utils/helpers'
+import { device } from '../../utils/device'
 
 const Block = styled.div`
    width: 70%;
    padding: 0 0 0 45px;
+
+   @media ${device.tablet} {
+      width: 100%;
+      padding: 0;
+   }
 `
 
 const Title = styled.h2`
    font-size: 30px;
    margin: 20px 10px;
    color: #302a39;
+
+   @media ${device.tablet} {
+      margin-top: 30px;
+   }
 `
 const DayItems = styled.div`
-   /* display: flex;
-   flex-direction: row;
-   flex-wrap: wrap;
-   justify-content: space-between; */
    width: 100%;
    margin: 0 auto;
 `
@@ -72,4 +78,7 @@ const Forecast = ({ data }) => {
 }
 
 export default Forecast
+
+
+
 

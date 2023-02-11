@@ -5,10 +5,20 @@ import Search from './components/Search/Search'
 import CurrentWeather from './components/CurrentWeather/CurrentWeather'
 import { WEATHER_API_KEY, WEATHER_API_URL } from './services/api'
 import Forecast from './components/Forecast/Forecast'
+import { device } from './utils/device'
 
 const Container = styled.div`
-   width: 1080px;
+   width: 1100px;
    margin: 30px auto;
+   padding: 0 10px;
+
+   @media ${device.tablet} {
+      max-width: 750px;
+   }
+
+   @media ${device.mobile} {
+      max-width: 400px;
+   }
 `
 
 const Block = styled.div`
@@ -18,6 +28,11 @@ const Block = styled.div`
    margin: 30px 0;
 
    position: relative;
+
+   @media ${device.tablet} {
+      justify-content: space-between;
+      flex-wrap: wrap;
+   }
 `
 
 const Title = styled.h1`
@@ -30,6 +45,15 @@ const Title = styled.h1`
    top: 50%;
    left: 50%;
    transform: translate(-50%, -50%);
+
+   @media ${device.tablet} {
+      font-size: 70px;
+   }
+
+   @media ${device.mobile} {
+      width: 100%;
+      font-size: 50px;
+   }
 `
 
 function App() {
@@ -74,4 +98,9 @@ function App() {
 }
 
 export default App
+
+
+
+
+
 

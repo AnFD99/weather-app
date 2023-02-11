@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
+import { device } from '../../utils/device'
 
 const Container = styled.div`
    width: 30%;
@@ -14,6 +15,11 @@ const Container = styled.div`
    top: 0;
    left: 0;
    z-index: 1;
+
+   @media ${device.tablet} {
+      position: relative;
+      width: 100%;
+   }
 `
 
 const Block = styled.div`
@@ -111,6 +117,9 @@ const CurrentWeather = ({ data }) => {
 }
 
 export default CurrentWeather
+
+
+
 
 
 
